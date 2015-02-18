@@ -15,8 +15,22 @@ describe("BankAccount", function() {
   describe("withdraw", function() {
     it("subtracts the withdrawl amount from the current balance", function() {
       var newBankAccount = Object.create(BankAccount);
+      newBankAccount.deposit(100);
       newBankAccount.withdraw(90);
-      expect(newBankAccount.balance).to.equal(-90);
+      expect(newBankAccount.balance).to.equal(10);
+    });
+    it("limits the withdrawl amount to available balance", function() {
+      var newBankAccount = Object.create(BankAccount);
+      newBankAccount.deposit(100);
+      newBankAccount.withdraw(150);
+      expect(newBankAccount.balance).to.equal(100);
+    });
+    it("limits the withdrawl amount to $500", function() {
+      var newBankAccount = Object.create(BankAccount);
+      newBankAccount.deposit(1000);
+      newBankAccount.withdraw(600)
+      expect(newBankAccount.balance).to.equal(1000);
     });
   });
+
 });

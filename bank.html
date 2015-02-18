@@ -10,8 +10,8 @@
   <body>
     <div class="container">
       <h1>Welcome to the Bank!</h1>
-
-      <div id="signUp" class="container">
+<div class="row">
+      <div id="signUp" class="col-md-6">
         <h3>Please sign up for a new account.</h3>
         <h6>You might win a new penny.</h6>
         <form id="signUpForm">
@@ -21,17 +21,18 @@
         </form>
       </div>
 
-      <div id="transfer" class="container">
+      <div id="transfer" class="col-md-6">
         <h3>Make an account transfer:</h3>
+        <br>
         <form id="transferForm">
           <input type="text" id="deposit" placeholder="deposit amount">
           <input type="text" id="withdraw" placeholder="withdraw amount">
           <button type="submit" class="btn btn-md btn-primary">Transfer</button>
         </form>
       </div>
-
+</div>
 <hr>
-      <div id="balance" class="container">
+      <div id="balance">
         <p><span class="accountHolder"></span>, your account balance is: $<span class="currentBalance"></span></p>
       </div>
     </div>

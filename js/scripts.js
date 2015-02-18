@@ -4,7 +4,13 @@ var BankAccount = {
     this.balance = this.balance + amount;
   },
   withdraw: function(amount) {
-    this.balance = this.balance - amount;
+    if (this.balance - amount < 0) {
+      alert("Cannot squeeze blood out of a turnip!")
+    } else if (amount > 500) {
+      alert("Money does not grow on trees! Goddamit!")
+    } else {
+      this.balance = this.balance - amount;
+    }
   }
 };
 
