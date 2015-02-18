@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Bank!</h1>
+
+      <div id="signUp" class="container">
+        <h3>Please sign up for a new account.</h3>
+        <h6>You might win a new penny.</h6>
+        <form id="signUpForm">
+          <input type="text" id="name" placeholder="first name, last name" required>
+          <input type="text" id="initialDeposit" placeholder="initial deposit?">
+          <button type="submit" class="btn btn-md btn-info">Create Account!</button>
+        </form>
+      </div>
+
+      <div id="transfer" class="container">
+        <h3>Make an account transfer:</h3>
+        <form id="transferForm">
+          <input type="text" id="deposit" placeholder="deposit amount">
+          <input type="text" id="withdraw" placeholder="withdraw amount">
+          <button type="submit" class="btn btn-md btn-primary">Transfer</button>
+        </form>
+      </div>
+
+<hr>
+      <div id="balance" class="container">
+        <p><span class="accountHolder"></span>, your account balance is: $<span class="currentBalance"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
